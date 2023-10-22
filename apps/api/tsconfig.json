@@ -1,0 +1,11 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "build"
+  },
+  "ts-node": {
+    "swc": true,
+    "transpileOnly": true,
+    "files": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "full-stack-starter",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "clean": "lerna run clean",
+    "dev": "lerna run dev",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "lint": "lerna run lint",
+    "format": "run-p format:*",
+    "format:es": "prettier --write . --ignore-path **/*/.gitignore --ignore-path .prettierignore",
+    "format:package-json": "sort-package-json package.json apps/*/package.json",
+    "qa": "lerna run qa",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write",
+    "package.json": "sort-package-json"
+  },
+  "devDependencies": {
+    "@k.sh/prettier-config": "^0.4.1",
+    "husky": "^8.0.0",
+    "lerna": "^6.6.1",
+    "lint-staged": "^15.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.3",
+    "sort-package-json": "^2.6.0"
+  }
+}
