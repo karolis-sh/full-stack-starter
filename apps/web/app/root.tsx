@@ -6,12 +6,16 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+import { cssBundleHref } from '@remix-run/css-bundle';
 import { LinksFunction } from '@remix-run/node';
 
-import globalStylesheetUrl from './global.css';
+import globalStyles from '~/styles/global.css';
 
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: globalStylesheetUrl }];
+  return [
+    { rel: 'stylesheet', href: globalStyles },
+    ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
+  ];
 };
 
 export default function App() {
