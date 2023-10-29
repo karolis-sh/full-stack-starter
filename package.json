@@ -12,7 +12,7 @@
     "test": "lerna run test",
     "lint": "lerna run lint",
     "format": "run-p format:*",
-    "format:es": "prettier --write . --ignore-path **/*/.gitignore --ignore-path .prettierignore",
+    "format:es": "prettier --write .",
     "format:package-json": "sort-package-json package.json apps/*/package.json",
     "qa": "lerna run qa",
     "prepare": "husky install"
@@ -29,5 +29,8 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
     "sort-package-json": "^2.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

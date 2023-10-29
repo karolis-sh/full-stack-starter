@@ -1,11 +1,11 @@
 {
   "name": "api",
-  "version": "0.0.0",
-  "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf build",
     "dev": "ts-node src/index.ts",
+    "lint": "tsc --noEmit",
+    "qa": "npm run lint",
     "start": "node build/index.js"
   },
   "dependencies": {

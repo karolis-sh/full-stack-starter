@@ -1,2 +1,8 @@
 # dependencies
 node_modules
+
+/apps/api/build
+
+/apps/web/.cache
+/apps/web/build
+/apps/web/public/build
