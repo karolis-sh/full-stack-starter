@@ -1,9 +1,10 @@
 {
   "name": "api",
+  "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf build",
-    "dev": "ts-node src/index.ts",
+    "dev": "node --no-warnings --enable-source-maps --loader ts-node/esm src/index.ts",
     "lint": "tsc --noEmit",
     "qa": "npm run lint",
     "start": "node build/index.js"
